@@ -1,0 +1,11 @@
+<div class="action-div" (click)=" clickActive()" (blur)="clickActive()">
+    <img src="assets/svg/points-icon.svg" alt="" [ngClass]="{'rotate-img':inverted}">
+    <div class="action-div-menu " @actionMenu   *ngIf="active">
+        <ul>
+            <li ><img src="assets/svg/edit-icon.svg" alt=""> Edit</li>
+            <li ><img src="assets/svg/sign-icon.svg" alt=""> Sign</li>
+            <li ><img src="assets/svg/documents-icon.svg" alt=""> View summary</li>
+            <li ><img src="assets/svg/delete-icon.svg" alt=""> Delete</li>
+        </ul>
+    </div>
+</div>

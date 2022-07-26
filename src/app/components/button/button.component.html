@@ -1,0 +1,11 @@
+<button class="btn" [ngClass]="'btn-'+type" (click)="event($event)">
+    <span class="btn-icon" *ngIf="type=='primary'">
+        <img src="assets/svg/add-white-icon.svg" alt="">
+    </span>
+    <span class="btn-icon" *ngIf="type=='filter'">
+        <img src="assets/svg/filter-icon.svg" alt="">
+    </span>
+    <span class="btn-text">
+        {{text}}
+    </span>
+</button>

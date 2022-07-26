@@ -1,0 +1,55 @@
+.contract
+    width: 100%
+    padding-bottom: 100px
+    @media screen and (max-width: 992px)
+        padding-bottom: 50px
+
+    &-title
+        text-align: center
+        margin-top: 62px
+
+    &-filter,&-table
+        width: 1079px
+        margin-left: auto
+        margin-right: auto
+        @media screen and (max-width: 1100px)
+            width: 900px
+        @media screen and (max-width: 992px)
+            width: 100%
+
+    &-table
+        margin-top: 30px
+
+    &-msg
+        position: fixed
+        bottom: 10%
+        right: 50px
+        @media screen and (max-width: 992px)
+            position: relative
+            width: 100%
+            margin-top: 8px
+            bottom: 0
+            right: 0
+            text-align: right
+
+.scale-up-center
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+
+@-webkit-keyframes scale-up-center
+  0% 
+    -webkit-transform: scale(0.5)
+    transform: scale(0.5)
+
+  100% 
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+@keyframes scale-up-center
+    0%
+        -webkit-transform: scale(0.5)
+        transform: scale(0.5)
+
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)

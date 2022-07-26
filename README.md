@@ -1,6 +1,83 @@
+
 # OnTop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+# Components
+
+* action
+* button
+* input-search
+* menu
+* table
+
+# Pages
+
+* contracts
+
+# Interfaces
+
+* table-item
+  
+# Block, Element, Modifier methodology (BEM) 
+
+
+example sass
+```sass
+    .contract
+        width: 100%
+        padding-bottom: 100px
+        @media screen and (max-width: 992px)
+            padding-bottom: 50px
+
+        &-title
+            text-align: center
+            margin-top: 62px
+
+        &-filter,&-table
+            width: 1079px
+            margin-left: auto
+            margin-right: auto
+            @media screen and (max-width: 1100px)
+                width: 900px
+            @media screen and (max-width: 992px)
+                width: 100%
+```
+example html
+```html
+    <div class="contract">
+    <div class="contract-menu">
+        <app-menu></app-menu>
+    </div>
+
+    <div class="contract-title">
+        <h1>Contracts for Lucas </h1>
+    </div>
+
+    <div class="contract-filter">
+        <app-filter></app-filter>
+    </div>
+
+    <div class="contract-table">
+        <app-table [tableList]="table"></app-table>
+    </div>
+    <div class="contract-msg scale-up-center" *ngIf="showMsg">
+        <img src="assets/svg/msg-icon.svg" alt="">
+    </div>
+</div>
+```
+# Unit testing 
+
+ Exemple simple test in app-button
+```ts
+it('should click button', () => {
+    spyOn(component.clicked, 'emit');
+    const btn = fixture.nativeElement.querySelector(
+      'button'
+    );
+    btn.click()
+    fixture.detectChanges()
+    expect(component.clicked.emit).toHaveBeenCalled();
+  });
+```
 
 ## Development server
 

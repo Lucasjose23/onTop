@@ -1,0 +1,67 @@
+<div class="table" role="table">
+    <div class="table-desktop">
+        <table>
+            <tr>
+                <th class="first">Contractor name</th>
+                <th>Type</th>
+                <th>Start date</th>
+                <th>Amount </th>
+                <th>Status </th>
+                <th>Actions </th>
+            </tr>
+            <tr class="items" *ngFor="let item of tableList">
+                <td class="first">
+                    <div><img [src]="item.pic" alt="">{{item.contractor_name}}</div>
+                </td>
+                <td>{{item.type}}</td>
+                <td>{{item.start_date}}</td>
+                <td>{{item.amount}}</td>
+                <td [ngClass]="item.status">
+                    <div>
+                        <div class="circle"></div>{{item.status=='active'?'Active':'Signature pending'}}
+                    </div>
+                </td>
+                <td>
+                    <app-action></app-action>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="table-mobile">
+        <table *ngFor="let item of tableList">
+            <tr class="items">
+                <td class="first title">Contractor name</td>
+                <td class="first element">
+                    {{item.contractor_name}}
+                </td>
+            </tr>
+            <tr class="items">
+                <td class="title">Type</td>
+                <td class="element">{{item.type}}</td>
+            </tr>
+            <tr class="items">
+                <td class="title">Start date</td>
+                <td class="element">{{item.start_date}}</td>
+            </tr>
+            <tr class="items">
+                <td class="title">Amount </td>
+                <td class="element">{{item.amount}}</td>
+            </tr>
+            <tr class="items" [ngClass]="item.status">
+                <td class="title">Status </td>
+                <td >
+                    <div>
+                        <div class="circle"></div>{{item.status=='active'?'Active':'Signature pending'}}
+                    </div>
+                </td>
+            </tr>
+            <tr class="items">
+                <td class="title">Actions </td>
+                <td class="element">
+                        <app-action [inverted]="true"></app-action>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
