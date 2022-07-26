@@ -20,7 +20,7 @@
 # Block, Element, Modifier methodology (BEM) 
 
 
-example sass
+Example sass
 ```sass
     .contract
         width: 100%
@@ -41,7 +41,7 @@ example sass
             @media screen and (max-width: 992px)
                 width: 100%
 ```
-example html
+Example html
 ```html
     <div class="contract">
     <div class="contract-menu">
@@ -66,7 +66,7 @@ example html
 ```
 # Unit testing 
 
- Exemple simple test in app-button
+ Example simple test in app-button
 ```ts
 it('should click button', () => {
     spyOn(component.clicked, 'emit');
